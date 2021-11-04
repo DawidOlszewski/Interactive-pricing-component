@@ -13,23 +13,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class = "header">
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required. </p>
+  </div>
+  
+  
+  <main class= "card">
+    <section class="section1">
+      <p class="pageviews">100k pageviews</p>
+      <input type = "range" min ="1" max = "5" step="1" value="3" class="slider">
+      <p class ="cost">$16.00 <span class="billing-type">/month</span></p>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+      
+      <label>
+        <p>Monthly Billing</p> 
+        <input type="checkbox" class="toggle">
+        <p>Yearly Billing</p>
+        <p>25% <span>discount</span></p> 
+      </label>
+    </section>
+    <hr>
+    <section class="section2">
+      <ul>
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
 
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-
-  Start my trial
+      <a href="#">Start my trial</a>
+    </section>
+  </main>
 
   <!-- <input type = "range" min ="1" max = "5" step="1" value="3">
   
