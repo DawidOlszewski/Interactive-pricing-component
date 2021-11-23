@@ -222,7 +222,8 @@ label{
     padding: 0.2rem .4rem;
     font-size: 0.7rem;
     border-radius: 100rem;
-    right: -2.5rem;
+    right: -3rem;
+    display:none;
 
 }
 
@@ -241,6 +242,7 @@ hr{
 }
 
 .list-section ul{
+    padding-left: 0rem;
     margin-top: 2rem;
     list-style: none;
     margin-bottom: 0rem;
