@@ -12,7 +12,14 @@ const viewsNode = document.querySelector(".pageviews")
 const billingNode = document.querySelector('.billing-type')
 const discount = document.querySelector('.discount')
 
-
+const responsiveDiscount = () => {
+    if(document.body.clientWidth > 900){
+        discount.innerText = '25% discount'
+    }
+    else{
+        discount.innerText = '25%'
+    }
+}
 
 const changeCardDetails = function(viewsNode, costNode){
     let pageDetailsIndex = range.value - 1
@@ -25,8 +32,7 @@ const changeCardDetails = function(viewsNode, costNode){
     costNode.innerHTML = `$${isYear == 0?details[1]:details[1]*9}.00<span class="billing-type">/${['month','year'][isYear]}</span>`
 }
 
-
-// var range = range | document.querySelector('input[type="range"]')
-
+responsiveDiscount();
 range.addEventListener('input',() => changeCardDetails(viewsNode, costNode));
 toggleSwitch.addEventListener('input',() => changeCardDetails(viewsNode, costNode));
+window.addEventListener("resize", responsiveDiscount)
