@@ -103,10 +103,48 @@ h1{
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-rows: repeat(4,5rem);
+    grid-template-rows:  4rem repeat(3,5rem);
     
     border:  solid rgb(224, 223, 223);
     border-width: 0 0 0.1rem 0 ;
+}
+
+.pageviews{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+    margin-top: 3rem;
+}
+
+.input{
+    -webkit-appearance: none;
+    height: 0.55rem;
+    width: 83%;
+    border-radius: 0.5rem;
+    outline: none;
+    background: linear-gradient(90deg,
+    var(--progress-start-color, lightblue),
+    var(--progress-end-color, var(--progress-start-color)) var(--progress-length),
+    var( --range-color, whitesmoke) var(--progress-length),
+    var(--range-color, whitesmoke));
+}
+
+
+.input::-webkit-slider-thumb{
+
+    background-color: var(--Strong-Cyan);
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
+    -webkit-appearance: none;
+    width: var(--thumb-size , 2rem);
+    height: var(--thumb-size, 2rem);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem -0.3rem var(--Strong-Cyan);
+
 }
 
 /* checkbox */
@@ -183,12 +221,7 @@ label{
 
 
 
-.pageviews{
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 0.12rem;
-}
+
 
 hr{
   display: none;
@@ -201,6 +234,7 @@ hr{
 }
 
 .list-section ul{
+    margin-top: 2rem;
     list-style: none;
     margin-bottom: 0rem;
 }
@@ -230,35 +264,7 @@ hr{
     font-size: 0.85rem;
 }
 
-.input{
-    -webkit-appearance: none;
-    height: 0.55rem;
-    width: 83%;
-    border-radius: 0.5rem;
-    outline: none;
-    background: linear-gradient(90deg,
-    var(--progress-start-color, lightblue),
-    var(--progress-end-color, var(--progress-start-color)) var(--progress-length),
-    var( --range-color, whitesmoke) var(--progress-length),
-    var(--range-color, whitesmoke));
-}
 
-
-.input::-webkit-slider-thumb{
-
-    background-color: var(--Strong-Cyan);
-    background-image: url("images/icon-slider.svg");
-    background-repeat: no-repeat;
-    background-size: 55%;
-    background-position: center;
-    -webkit-appearance: none;
-    width: var(--thumb-size , 2rem);
-    height: var(--thumb-size, 2rem);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 1rem 3rem -0.3rem var(--Strong-Cyan);
-
-}
 
 
 
