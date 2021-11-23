@@ -29,12 +29,12 @@
 
 
 --progress-start-color: var(--Soft-Cyan);
---range-color: var(--Light-Grayish-Blue);
+--range-color: var(--Light-Greyish-Blue);
 --thumb-size: 2.6rem;
 
 --toggle-slider-size : 1rem;
---toggle-box-width: 3rem;
---toggle-box-height: 2rem;
+--toggle-box-width: 2.5rem;
+--toggle-box-height: 1.5rem;
 --toggle-slider-margin: calc((var(--toggle-box-height) - var(--toggle-slider-size))/2);
 
 
@@ -77,10 +77,16 @@ body{
 .header{
     /* padding:4rem 2rem ; */
     background: url(./images/pattern-circles.svg) no-repeat center center;
+    min-height: 10rem;
+    height: 15.5rem;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
 }
 
 h1{
     font-size: 1.3rem;
+    color: var(--Dark-Desaturated-Blue);
 }
 
 .header p {
@@ -95,8 +101,8 @@ h1{
     border-radius:  1rem;
     max-width: 30rem;
     width: 90%;
-    box-shadow: 0 0 5rem -3rem;
-
+    box-shadow: 0 1rem 5rem -2rem;
+    margin-bottom: 5rem;
 }
 
 .settings-section{
@@ -195,7 +201,7 @@ label{
 .cost{
     display: flex;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--Dark-Desaturated-Blue)
 
@@ -213,7 +219,8 @@ label{
     position:absolute;
     background-color: var(--Light-Grayish-Red);
     color: var(--Light-Red);
-    
+    padding: 0.2rem .4rem;
+    font-size: 0.7rem;
     border-radius: 100rem;
     right: -2.5rem;
 
