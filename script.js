@@ -25,14 +25,15 @@ const changeCardDetails = function(viewsNode, costNode){
     let pageDetailsIndex = range.value - 1
     let isYear = +toggleSwitch.checked;
     let details = pageDetails[pageDetailsIndex]
-
-    discount.style.display = ["none", "block"][isYear]
+    
+    discount.style.webkitFilter  = `opacity(${["0%", "100%"][isYear]})`
 
     viewsNode.innerText = `${details[0]} pageviews`
     costNode.innerHTML = `$${isYear == 0?details[1]:details[1]*9}.00<span class="billing-type">/${['month','year'][isYear]}</span>`
 }
 
 responsiveDiscount();
+changeCardDetails(viewsNode, costNode);
 range.addEventListener('input',() => changeCardDetails(viewsNode, costNode));
 toggleSwitch.addEventListener('input',() => changeCardDetails(viewsNode, costNode));
 window.addEventListener("resize", responsiveDiscount)

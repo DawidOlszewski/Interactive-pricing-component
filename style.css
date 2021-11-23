@@ -225,13 +225,8 @@ label{
     font-size: 0.7rem;
     border-radius: 100rem;
     right: -3rem;
-    display:none;
-
+    -webkit-transition : -webkit-filter 0.1s linear;
 }
-
-
-
-
 
 hr{
   display: none;
@@ -273,6 +268,11 @@ hr{
     background-color: var(--Dark-Desaturated-Blue);
     text-decoration: none;
     font-size: 0.85rem;
+    -webkit-transition : -webkit-filter 0.3s ease;
+}
+
+.button:hover{
+    filter: opacity(90%);
 }
 
 @media (min-width: 900px){
@@ -288,13 +288,10 @@ hr{
         
     }
 
-    
-
     .discount{
         right: -6.2rem;
     }
     
-
     .list-section{
         flex-direction: row;
     }
@@ -311,10 +308,3 @@ hr{
         margin: 3rem 3rem 3rem auto;
     }
 }
-
-
-
-
-
-
-
