@@ -26,9 +26,12 @@
 
       <p class ="cost">$16.00 <span class="billing-type">/month</span></p>
       
-      <label class="toggle-switch">
+      <label>
         <p>Monthly Billing</p> 
-        <input type="checkbox">
+        <input type="checkbox" name="checkbox" class="checkbox">
+        <div class="toggle-box">
+            <div class="toggle-slider"></div>
+        </div>
         <p>Yearly Billing</p>
         <p class="discount">25% <span>discount</span></p> 
       </label>
@@ -46,17 +49,15 @@
   </main>
 
   <script>
-    let ranges = document.querySelectorAll('input[type="range"]')
+    let range = document.querySelector('input[type="range"]')
     const calcProgressLength = (min, value, max) => `${((value - min) / (max - min ) * 100)}%`
 
-    for ( let range of ranges){
-        range.style.setProperty('--value', range.value);
-        range.style.setProperty('--min', range.min == '' ? '0' : range.min);
-        range.style.setProperty('--max', range.max == '' ? '100' : range.max);
-        range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max))
-        range.addEventListener('input', () => range.style.setProperty('--value', range.value));
-        range.addEventListener('input', () => range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max)));
-    }
+    range.style.setProperty('--value', range.value);
+    range.style.setProperty('--min', range.min == '' ? '0' : range.min);
+    range.style.setProperty('--max', range.max == '' ? '100' : range.max);
+    range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max))
+    range.addEventListener('input', () => range.style.setProperty('--value', range.value));
+    range.addEventListener('input', () => range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max)));
     
 </script>
   <script src="./script.js"></script>
