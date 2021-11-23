@@ -22,10 +22,130 @@
 --Grayish-Blue : hsl(225, 20%, 60%);
 /* (Text & CTA Background) */
 --Dark-Desaturated-Blue : hsl(227, 35%, 25%);
+
+
+--cards-side-padding: 2rem;
+--cards-top-bottom-padding:3rem;
+
+
+--progress-start-color: var(--Soft-Cyan);
+ --range-color: var(--Light-Grayish-Blue);
+ --thumb-size: 3rem;
 }
 
+*, *::after, *::before{
+    box-sizing: border-box;
+}
 
 html{
     font-family: 'Manrope', sans-serif;
     font-size: 15px;
+    text-align: center;
 }
+
+body{
+    /* background-color: sred; */
+    margin: 0;
+    /* padding: 10rem 0 10rem 0; */
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    background: url("./images/bg-pattern.svg") 0% -10rem;
+    
+    background-repeat:no-repeat;
+
+    background-size:cover;
+}
+
+
+
+.header{
+    /* padding:4rem 2rem ; */
+    background: url(./images/pattern-circles.svg) no-repeat center center;
+}
+
+h1{
+    font-size: 1.3rem;
+}
+
+.header p {
+    margin: 0 2rem;
+    font-size: 0.85rem;
+    word-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+.card{
+    background-color: yellow;
+    border-radius:  1rem;
+    max-width: 30rem;
+    width: 90%;
+}
+
+.settings-section{
+    display: grid;
+    grid-template-rows: repeat(4,5rem);
+}
+
+.pageviews{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+}
+
+.list-section{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+.button{
+    width: 10rem;
+    height:2.78rem;
+    border-radius: 5rem;
+    margin:2rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-Desaturated-Blue);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.input{
+
+    -webkit-appearance: none;
+    height: 1rem;
+    outline: none;
+    background-color: brown;
+    background: linear-gradient(90deg,
+    var(--progress-start-color, lightblue),
+    var(--progress-end-color, var(--progress-start-color)) var(--progress-length),
+    var( --range-color, whitesmoke) var(--progress-length),
+    var(--range-color, whitesmoke));
+}
+
+
+.input::-webkit-slider-thumb{
+    background-color: var(--Strong-Cyan);
+    -webkit-appearance: none;
+    width: var(--thumb-size , 2rem);
+    height: var(--thumb-size, 2rem);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

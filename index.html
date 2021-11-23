@@ -20,39 +20,45 @@
   
   
   <main class= "card">
-    <section class="section1">
+    <section class="settings-section">
       <p class="pageviews">100k pageviews</p>
-      <input type = "range" min ="1" max = "5" step="1" value="3" class="slider">
-      <p class ="cost">$16.00 <span class="billing-type">/month</span></p>
+    <input class = "input" type="range" name="slider" min="1" max="5" step="1">
 
+      <p class ="cost">$16.00 <span class="billing-type">/month</span></p>
       
-      <label>
+      <label class="toggle-switch">
         <p>Monthly Billing</p> 
-        <input type="checkbox" class="toggle">
+        <input type="checkbox">
         <p>Yearly Billing</p>
-        <p>25% <span>discount</span></p> 
+        <p class="discount">25% <span>discount</span></p> 
       </label>
     </section>
     <hr>
-    <section class="section2">
+    <section class="list-section">
       <ul>
         <li>Unlimited websites</li>
         <li>100% data ownership</li>
         <li>Email reports</li>
       </ul>
 
-      <a href="#">Start my trial</a>
+      <a href="#" class="button">Start my trial</a>
     </section>
   </main>
 
-  <!-- <input type = "range" min ="1" max = "5" step="1" value="3">
-  
-  <input type="checkbox"> -->
+  <script>
+    let ranges = document.querySelectorAll('input[type="range"]')
+    const calcProgressLength = (min, value, max) => `${((value - min) / (max - min ) * 100)}%`
 
+    for ( let range of ranges){
+        range.style.setProperty('--value', range.value);
+        range.style.setProperty('--min', range.min == '' ? '0' : range.min);
+        range.style.setProperty('--max', range.max == '' ? '100' : range.max);
+        range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max))
+        range.addEventListener('input', () => range.style.setProperty('--value', range.value));
+        range.addEventListener('input', () => range.style.setProperty('--progress-length', calcProgressLength(range.min, range.value, range.max)));
+    }
+    
+</script>
   <script src="./script.js"></script>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 </html>
